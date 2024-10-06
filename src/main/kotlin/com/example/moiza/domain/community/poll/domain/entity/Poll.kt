@@ -22,7 +22,12 @@ class Poll(
     var options: MutableList<PollOption> = mutableListOf()
         protected set
 
+    @OneToMany(mappedBy = "poll", cascade = [CascadeType.ALL], orphanRemoval = true)
+    var pollHashtags: MutableList<PollHashtag> =  mutableListOf()
+        protected set
+
     fun addOptions(newOptions: List<PollOption>) {
         options.addAll(newOptions)
     }
 }
+
