@@ -1,7 +1,5 @@
 package com.example.moiza.domain.community.community.domain.entity
 
-import com.example.moiza.domain.community.poll.domain.entity.PollHashtag
-import com.example.moiza.domain.community.post.domain.entity.PostHashtag
 import jakarta.persistence.Column
 import jakarta.persistence.OneToMany
 import jakarta.persistence.Entity
@@ -22,8 +20,5 @@ class Hashtag(
         protected set
 
     @OneToMany(mappedBy = "hashtag")
-    var postHashtags: MutableList<PostHashtag> = mutableListOf()
-
-    @OneToMany(mappedBy = "hashtag")
-    var pollHashtags: MutableList<PollHashtag> = mutableListOf()
+    var communityHashtags: MutableList<CommunityHashtag> = mutableListOf()
 }
