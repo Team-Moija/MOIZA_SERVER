@@ -4,4 +4,5 @@ data class CreatePostRequest(
     val title: String,
     val content: String,
     val image: List<String>?,
+    val hashtags: List<String>
 )
