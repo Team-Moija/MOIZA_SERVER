@@ -1,13 +1,17 @@
 package com.example.moiza.domain.community.poll.presentation.dto.res
 
+import com.example.moiza.domain.community.community.domain.entity.type.CommunityType
 import com.example.moiza.domain.user.presentation.dto.res.UserResponse
+import java.time.LocalDateTime
 
-class PollResponse(
+data class PollResponse(
     val pollId: Long,
     val title: String,
     val content: String,
+    val type: CommunityType,
     val options: List<PollOptionResponse>,
-    val user: UserResponse
+    val user: UserResponse,
+    val createdAt: LocalDateTime
 )
 
 data class PollOptionResponse(
