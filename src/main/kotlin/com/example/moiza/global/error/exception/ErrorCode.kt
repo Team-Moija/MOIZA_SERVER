@@ -17,5 +17,9 @@ enum class ErrorCode(
     // poll
     POLL_NOT_FOUND(404, "Poll Not Found"),
     POLL_OPTION_NOT_FOUND(404, "Poll Option Not Found"),
-    ALREADY_VOTED(409, "Already Voted")
+    ALREADY_VOTED(409, "Already Voted"),
+
+    // hashtag
+    HASHTAG_ALREADY_EXISTS(409, "Hashtag Already Exists"),
+    HASHTAG_NOT_FOUND(404, "Hashtag Not Found")
 }
